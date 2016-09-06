@@ -1,6 +1,6 @@
 ﻿namespace WPFVisualizers
 {
-  partial class GeometryDrawingControl
+  partial class DrawingImageControl
   {
     /// <summary>
     /// Required designer variable.

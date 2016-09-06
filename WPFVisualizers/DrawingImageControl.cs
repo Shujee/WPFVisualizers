@@ -3,15 +3,15 @@ using System.Windows.Media;
 using Microsoft.VisualStudio.DebuggerVisualizers;
 
 [assembly: System.Diagnostics.DebuggerVisualizer(
-  typeof(WPFVisualizers.GeometryDrawingVisualizer),
+  typeof(WPFVisualizers.DrawingImageVisualizer),
   typeof(WPFVisualizers.XamlObjectSource),
   Target = typeof(DrawingImage),
-  Description = "WPF Visualizer (GeometryDrawing)")]
+  Description = "WPF Visualizer (DrawingImage)")]
 namespace WPFVisualizers
 {
-  public partial class GeometryDrawingControl : Control, IXamlContainer
+  public partial class DrawingImageControl : Control, IXamlContainer
   {
-    public GeometryDrawingControl()
+    public DrawingImageControl()
     {
       InitializeComponent();
     }
@@ -36,11 +36,11 @@ namespace WPFVisualizers
     }
   }
 
-  public class GeometryDrawingVisualizer : VisualizerBase<GeometryDrawing, GeometryDrawingControl>
+  public class DrawingImageVisualizer : VisualizerBase<DrawingImage, DrawingImageControl>
   {
     public static void TestShowVisualizer(object objectToVisualize)
     {
-      VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(objectToVisualize, typeof(GeometryDrawingVisualizer), typeof(XamlObjectSource));
+      VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(objectToVisualize, typeof(DrawingImageVisualizer), typeof(XamlObjectSource));
       visualizerHost.ShowVisualizer();
     }
   }
